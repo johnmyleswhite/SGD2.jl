@@ -41,6 +41,8 @@ function update!(m::SGDModel, X::Matrix, y::Vector)
 end
 
 # TODO: Move this into code above
+# This code, which calculates residuals at each iteration
+#  is much slower than other code.
 function update!(m::LassoSGD, X::Matrix, y::Vector)
 	p, n = size(X)
 

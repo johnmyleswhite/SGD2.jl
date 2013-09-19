@@ -18,3 +18,14 @@ m = SVMSGD(p,
 fit!(m, X, y)
 
 cost(m)
+
+m = SVMSGD(p,
+	       n,
+	       adagrad = true,
+	       polyak = true,
+	       eta = 0.01,
+	       lambda = 10000.0)
+
+fit!(m, X, y)
+
+cost(m)
